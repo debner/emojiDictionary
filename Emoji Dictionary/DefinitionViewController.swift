@@ -10,31 +10,23 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 	
+	@IBOutlet weak var yearLabel: UILabel!
+	@IBOutlet weak var categoryLabel: UILabel!
 	@IBOutlet weak var emojiDefinition: UILabel!
 	@IBOutlet weak var emojiLabel: UILabel!
-	var emoji = "NO EMOJI"
+	var emoji = Emoji()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 			// Do any additional setup after loading the view.
 
-		emojiLabel.text = emoji
+		emojiLabel.text = emoji.stringEmoji
+		yearLabel.text = "Creation Year: \(emoji.birthYear)"
+		categoryLabel.text = "Category: \(emoji.category)"
+		emojiDefinition.text = emoji.definition
 		
-		if emoji == "😀" {
-			emojiDefinition.text = "A grinning smile"
-		}
-		if emoji == "😃" {
-			emojiDefinition.text = "A grinning face with open mouth"
-		}
-		if emoji == "😄" {
-			emojiDefinition.text = "A grinning face with squinting eyes"
-		}
-		if emoji == "😁" {
-			emojiDefinition.text = "A grinning face with smiling eyes"
-		}
-		
-		
+		// With this layout, you'd need to change each instance if you changed the verbage. This would also require many if statements.
 		
 	}
 

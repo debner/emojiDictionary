@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHp-du-BpW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHp-du-BpW">
                                 <rect key="frame" x="78" y="79" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
@@ -62,19 +62,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oea-E2-CZC">
+                                <rect key="frame" x="123" y="456" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year of Creation: 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtW-DP-Rpn">
+                                <rect key="frame" x="102.5" y="497" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mHp-du-BpW" firstAttribute="centerX" secondItem="mZ8-2p-oew" secondAttribute="centerX" id="CZJ-L4-Mx9"/>
-                            <constraint firstItem="Aib-6V-yII" firstAttribute="top" secondItem="mHp-du-BpW" secondAttribute="bottom" constant="72" id="IJ8-gv-qsS"/>
+                            <constraint firstItem="Aib-6V-yII" firstAttribute="top" secondItem="mHp-du-BpW" secondAttribute="bottom" constant="97" id="IJ8-gv-qsS"/>
                             <constraint firstItem="Aib-6V-yII" firstAttribute="centerX" secondItem="mZ8-2p-oew" secondAttribute="centerX" id="TDh-M9-Kp4"/>
-                            <constraint firstItem="mHp-du-BpW" firstAttribute="top" secondItem="z5x-dD-Qi4" secondAttribute="top" constant="40" id="hHc-7i-j5z"/>
+                            <constraint firstItem="Oea-E2-CZC" firstAttribute="top" secondItem="Aib-6V-yII" secondAttribute="bottom" constant="20" id="cdF-cA-9o7"/>
+                            <constraint firstItem="MtW-DP-Rpn" firstAttribute="centerX" secondItem="mZ8-2p-oew" secondAttribute="centerX" id="eHm-C2-Cak"/>
+                            <constraint firstItem="Oea-E2-CZC" firstAttribute="centerX" secondItem="mZ8-2p-oew" secondAttribute="centerX" id="fcJ-ha-psL"/>
+                            <constraint firstItem="mHp-du-BpW" firstAttribute="top" secondItem="z5x-dD-Qi4" secondAttribute="top" constant="15" id="hHc-7i-j5z"/>
+                            <constraint firstItem="MtW-DP-Rpn" firstAttribute="top" secondItem="Oea-E2-CZC" secondAttribute="bottom" constant="20" id="jO8-DW-AJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z5x-dD-Qi4"/>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="Oea-E2-CZC" id="S9R-Xd-565"/>
                         <outlet property="emojiDefinition" destination="Aib-6V-yII" id="oBk-5n-Eyo"/>
                         <outlet property="emojiLabel" destination="mHp-du-BpW" id="CcV-vH-8aE"/>
+                        <outlet property="yearLabel" destination="MtW-DP-Rpn" id="AHh-4u-nF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpK-MX-fvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
